@@ -21,6 +21,12 @@ namespace WindowProcessProject
         public MainWindow ()
         {
             InitializeComponent();
+            Load();
+        }
+        private void Load ()
+        {
+            lvProcessList.ItemsSource = null;
+            lvProcessList.ItemsSource= Process.GetProcesses();
         }
 
         private void MenuItem_Click ( object sender, RoutedEventArgs e )

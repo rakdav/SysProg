@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowProcessProject"
         mc:Ignorable="d"
-        Title="Диспетчер задач" Height="450" Width="600">
+        Title="Диспетчер задач" Height="450" Width="600" FontSize="20">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -23,12 +23,8 @@
         <ListView Name="lvProcessList" Grid.Row="1">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="50">Id</GridViewColumn>
-                    <GridViewColumn Width="100">MainModule</GridViewColumn>
-                    <GridViewColumn Width="100">ProcessName</GridViewColumn>
-                    <GridViewColumn Width="100">StartTime</GridViewColumn>
-                    <GridViewColumn Width="100">Handle</GridViewColumn>
-                    <GridViewColumn Width="100">PageMemorySize64</GridViewColumn>
+                    <GridViewColumn Width="100"          DisplayMemberBinding="{Binding Path=Id}">Id</GridViewColumn>
+                    <GridViewColumn Width="200" DisplayMemberBinding="{Binding Path=ProcessName}">ProcessName</GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
