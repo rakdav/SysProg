@@ -8,7 +8,8 @@ do
         "2.Просмотреть информацию о процессе\n" +
         "3.Удалить процесс\n" +
         "4.Показать все процессы\n" +
-        "5.Выход");
+        "5.Запустить калькулятор\n"+
+        "6.Выход");
     Console.WriteLine("Выберите пункт меню:");
     int n = int.Parse(Console.ReadLine()!);
     switch (n)
@@ -47,11 +48,17 @@ do
                 foreach (Process i in Process.GetProcesses())
                 {
                     Console.WriteLine($"{i.Id} {i.ProcessName}");
-
                 }
             }
             break;
-        case 5: start = false; break;
+        case 5:
+            {
+                Process calcProcess = new Process();
+                calcProcess.StartInfo = new ProcessStartInfo("calc.exe");
+                calcProcess.Start();
+            }
+            break;
+        case 6: start = false; break;
     }
 }
 while (start);
