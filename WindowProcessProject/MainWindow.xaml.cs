@@ -44,5 +44,23 @@ namespace WindowProcessProject
         {
             this.Close();
         }
+
+        private void MenuItem_Click_2 ( object sender, RoutedEventArgs e )
+        {
+            try
+            {
+                Process? process = lvProcessList.SelectedItem as Process;
+                process!.Kill();
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Load();
+            }
+        }
     }
 }

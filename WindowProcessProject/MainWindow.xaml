@@ -27,6 +27,11 @@
                     <GridViewColumn Width="200" DisplayMemberBinding="{Binding Path=ProcessName}">ProcessName</GridViewColumn>
                 </GridView>
             </ListView.View>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Удалить" Click="MenuItem_Click_2" ></MenuItem>
+                </ContextMenu>
+            </ListView.ContextMenu>
         </ListView>
     </Grid>
 </Window>
