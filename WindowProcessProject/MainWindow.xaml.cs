@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,6 +26,17 @@ namespace WindowProcessProject
         private void MenuItem_Click ( object sender, RoutedEventArgs e )
         {
             OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "(*.exe)|*.exe";
+            if (ofd.ShowDialog() == true)
+            {
+                string path = ofd.FileName;
+                Process.Start(@$"{path}");
+            }
+        }
+
+        private void MenuItem_Click_1 ( object sender, RoutedEventArgs e )
+        {
+            this.Close();
         }
     }
 }

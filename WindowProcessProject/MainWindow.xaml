@@ -16,9 +16,21 @@
             <MenuItem Header="Процессы">
                 <MenuItem Header="Запустить ..." Click="MenuItem_Click" >
                 </MenuItem>
-                <MenuItem Header="Выход" >
+                <MenuItem Header="Выход" Click="MenuItem_Click_1"  >
                 </MenuItem>
             </MenuItem>
         </Menu>
+        <ListView Name="lvProcessList" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="50">Id</GridViewColumn>
+                    <GridViewColumn Width="100">MainModule</GridViewColumn>
+                    <GridViewColumn Width="100">ProcessName</GridViewColumn>
+                    <GridViewColumn Width="100">StartTime</GridViewColumn>
+                    <GridViewColumn Width="100">Handle</GridViewColumn>
+                    <GridViewColumn Width="100">PageMemorySize64</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
