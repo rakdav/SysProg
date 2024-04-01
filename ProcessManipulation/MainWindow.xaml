@@ -17,11 +17,11 @@
             <ListBox Name="lbRunProcess" Margin="5" Height="395"/>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Center">
-            <Button Margin="10">Start</Button>
-            <Button Margin="10">Stop</Button>
-            <Button Margin="10">CloseWindow</Button>
-            <Button Margin="10">Refresh</Button>
-            <Button Margin="10">Run calc</Button>
+            <Button Margin="10" IsEnabled="False">Start</Button>
+            <Button Margin="10" IsEnabled="False">Stop</Button>
+            <Button Margin="10" IsEnabled="False">CloseWindow</Button>
+            <Button Margin="10" IsEnabled="False">Refresh</Button>
+            <Button Margin="10" IsEnabled="False">Run calc</Button>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="2">
             <Label>Доступные сборки</Label>
