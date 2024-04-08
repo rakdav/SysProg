@@ -44,19 +44,29 @@
 
 //Потоки с параметрами
 
-Thread thread1 = new Thread(new ParameterizedThreadStart(Print));
-Thread thread2 = new Thread(Print);
-Thread thread3 = new Thread(message => Console.WriteLine(message));
-thread1.Start("Hello1");
-thread2.Start("Hello2");
-thread3.Start("Hello3");
-for (int i = 1; i <= 6; i++)
-{
-    Thread thread4 = new Thread(PrintNumber);
-    thread4.Start(i);
-}
-void Print ( object? message ) => Console.WriteLine(message);
-void PrintNumber( object? obj )
-{
-    if (obj is int n) Console.WriteLine($"{n}*{n}={n*n}");
-}
+//Thread thread1 = new Thread(new ParameterizedThreadStart(Print));
+//Thread thread2 = new Thread(Print);
+//Thread thread3 = new Thread(message => Console.WriteLine(message));
+//thread1.Start("Hello1");
+//thread2.Start("Hello2");
+//thread3.Start("Hello3");
+//for (int i = 1; i <= 6; i++)
+//{
+//    Thread thread4 = new Thread(PrintNumber);
+//    thread4.Start(i);
+//}
+//void Print ( object? message ) => Console.WriteLine(message);
+//void PrintNumber( object? obj )
+//{
+//    if (obj is int n) Console.WriteLine($"{n}*{n}={n*n}");
+//}
+
+//Создание потоков. Делагат ThreadStart
+//void Print() => Console.WriteLine("Hello, thread");
+//Thread myThread1 = new Thread(Print);
+//Thread myThread2 = new Thread(new ThreadStart(Print));
+//Thread myThread3 = new Thread(() => Console.WriteLine("Hello"));
+//myThread1.Start();
+//myThread2.Start();
+//myThread3.Start();
+

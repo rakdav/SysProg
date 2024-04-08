@@ -23,8 +23,8 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="cmdProcess" Grid.Row="0" Grid.Column="2"
-                    Margin="0,10,10,10">
-                Cliclk to Flip your images!
+                    Margin="0,10,10,10" Click="cmdProcess_Click">
+                Click to Flip your images!
             </Button>
             <Button x:Name="cmdCancel" Grid.Row="0" Grid.Column="0"
                     Margin="10,10,0,10">

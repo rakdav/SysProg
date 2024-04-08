@@ -15,9 +15,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChildProcess1", "ChildProce
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChildProcess2", "ChildProcess2\ChildProcess2.csproj", "{FEE3CA63-CF54-4F5D-9DA3-D9626EA1D507}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadProject", "ThreadProject\ThreadProject.csproj", "{50DC82CD-382C-4FA1-B5A3-2A1C78812D1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadProject", "ThreadProject\ThreadProject.csproj", "{50DC82CD-382C-4FA1-B5A3-2A1C78812D1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureLoad", "PictureLoad\PictureLoad.csproj", "{E167DB3D-3261-4567-B8DB-D13AD94A3E62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PictureLoad", "PictureLoad\PictureLoad.csproj", "{E167DB3D-3261-4567-B8DB-D13AD94A3E62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A6DF2354-76E4-48AD-8693-70D3EB525261}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchroThread", "SynchroThread\SynchroThread.csproj", "{2EC3E265-C344-49D8-9A9E-B23CC467683F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPLStart", "TPLStart\TPLStart.csproj", "{F764A2F8-9313-4CA0-9B97-BD6B0A39490B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +66,14 @@ Global
 		{E167DB3D-3261-4567-B8DB-D13AD94A3E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E167DB3D-3261-4567-B8DB-D13AD94A3E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E167DB3D-3261-4567-B8DB-D13AD94A3E62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EC3E265-C344-49D8-9A9E-B23CC467683F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EC3E265-C344-49D8-9A9E-B23CC467683F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EC3E265-C344-49D8-9A9E-B23CC467683F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EC3E265-C344-49D8-9A9E-B23CC467683F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F764A2F8-9313-4CA0-9B97-BD6B0A39490B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F764A2F8-9313-4CA0-9B97-BD6B0A39490B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F764A2F8-9313-4CA0-9B97-BD6B0A39490B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F764A2F8-9313-4CA0-9B97-BD6B0A39490B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
