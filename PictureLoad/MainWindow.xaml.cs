@@ -19,6 +19,7 @@ namespace PictureLoad
     /// </summary>
     public partial class MainWindow : Window
     {
+        private CancellationTokenSource cancelToken = new CancellationTokenSource();
         public MainWindow ()
         {
             InitializeComponent();
@@ -39,23 +40,41 @@ namespace PictureLoad
                 Directory.Delete(outputDirectory,true);
             }
             Directory.CreateDirectory(outputDirectory);
+            ParallelOptions parOpts = new ParallelOptions();
+            parOpts.CancellationToken = cancelToken.Token;
+            parOpts.MaxDegreeOfParallelism = Environment.ProcessorCount;
+
             string[] files = Directory.GetFiles(pictureDirectory,"*.jpg",
                 SearchOption.AllDirectories);
             //foreach (string item in files)
             //{
+            try { 
             Parallel.ForEach(files, currentFile =>
             {
+                parOpts.CancellationToken.ThrowIfCancellationRequested();
                 string fileName = Path.GetFileName(currentFile);
-                //this.Title = $"Processing {fileName} on thread " +
-                //    $"{Thread.CurrentThread.ManagedThreadId}";
+                Dispatcher?.Invoke(()=>
+                {
+                    this.Title = $"Processing {fileName} on thread " +
+                    $"{Thread.CurrentThread.ManagedThreadId}";
+                });
+                
                 using (Bitmap bitmap = new Bitmap(currentFile))
                 {
                     bitmap.RotateFlip(RotateFlipType.Rotate180FlipNone);
                     bitmap.Save(Path.Combine(outputDirectory, fileName));
                 }
             });
-            //}
+            }
+            catch(OperationCanceledException ex)
+            {
+                Dispatcher?.Invoke(()=>this.Title=ex.Message);
+            }
+        }
 
+        private void cmdCancel_Click(object sender, RoutedEventArgs e)
+        {
+            cancelToken.Cancel();
         }
     }
 }

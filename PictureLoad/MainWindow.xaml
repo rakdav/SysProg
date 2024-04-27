@@ -27,7 +27,7 @@
                 Click to Flip your images!
             </Button>
             <Button x:Name="cmdCancel" Grid.Row="0" Grid.Column="0"
-                    Margin="10,10,0,10">
+                    Margin="10,10,0,10" Click="cmdCancel_Click">
                 Cancel
             </Button>
         </Grid>
